@@ -2,6 +2,7 @@ body {
     font-family: sans-serif;
 }
 
+/* using group selector for more compact code */
 h2, h3 {
     color: #00a2c6;
 }
