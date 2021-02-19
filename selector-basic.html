@@ -1,0 +1,153 @@
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Selector Basic</title>
+    <style>
+        span {
+            color: red;
+        }
+        .red {
+            color: red;
+        }
+        .skyblue-bg {
+            background-color: skyblue;
+        }
+        .fancy {
+            font-weight: bold;
+            text-shadow: 4px 4px 3px #77f;
+        }
+        #special {
+            background-color: skyblue;
+        }
+        /* <a> element yang menerapkan href attribut */
+       a[href] {
+           color: blue;
+       }
+       /* <a> element yang menerapkan nilai pada href dengan awalan "#" */
+       a[href^="#"] {
+           background-color: gold;
+       }
+ 
+       /* <a> element yang menerapkan nilai pada href yang mengandung teks "example" */
+       a[href*="example"] {
+           background-color: silver;
+       }
+ 
+       /* <a> element yang menerapkan nilai pada href yang mengandung teks "insensitive" tidak mementingkan huruf kapital*/
+       a[href*="insensitive" i] {
+           color: cyan;
+       }
+ 
+       /* <a> element yang menerapkan nilai pada href dengan akhiran ".org" */
+       a[href$=".org"] {
+           color: red;
+       }
+
+    /* Universal Selector   */
+       /* Menargetkan seluruh tipe elemen yang mengandung nilai "en" pada atribut lang */
+ 
+       *[lang^=en] {
+           font-style: italic;
+           color: green;
+       }
+ 
+       /* Menargetkan seluruh tipe elemen yang memiliki nilai "warning" pada atribut class */
+       *.warning {
+           color: red;
+       }
+ 
+       /* Menargetkan seluruh tipe elemen yang memiliki nilai "content" pada atribut id */
+       *#content {
+           border: 1px solid blue;
+           padding: 20px;
+       }
+    </style>
+</head>
+<body>
+
+    <h3>Type Selector</h3>
+    <p>Type Selector menggunakan nama elemen sebagai target untuk diterapkannya <em>rule</em>. Dengan kata lain, ketika menggunakan selector ini tentu rule 
+        akan diterapkan pada seluruh elemen target yang ada pada dokumen HTML. <br>
+        Contohnya sebagai berikut :</p>
+        <ul>
+            <li>
+                <span>Ini merupakan sebuah teks yang berada pada elemen span. Seharusnya elemen ini ditampilkan dengan warna teks merah.</span>
+                <p>Ini merupakan sebuah teks yang berada pada elemen paragraf, teks ini tidak seharusnya tidak akan terpengaruh oleh rule.</p>
+                <span>Ini merupakan sebuah teks yang berada pada elemen span lainnya. Seharusnya elemen ini ditampilkan dengan warna teks merah juga.</span>
+            </li>
+        </ul>
+
+    <h3>Class Selector</h3>
+    <p>Class selector menetapkan target elemen berdasarkan nilai dari atribut class yang diterapkan pada elemennya. 
+        Untuk penulisan selector, awali dengan tanda titik (.) kemudian lanjutkan dengan nama class-nya. <br>Contoh penggunaan dari selector ini adalah :</p>
+        <ul>
+            <li>
+                <p class="red">Paragraf dengan teks berwarna merah</p>
+                <p class="skyblue-bg">Paragraf dengan background berwarna biru langit</p>
+                <p class="fancy">Paragraf dengan gaya fancy</p>
+                <p>Paragraf ini merupakan paragraf yang menampilkan teks dengan warna standar tanpa menerapkan styling</p>
+                            </li>
+        </ul>
+    <h3>ID Selector</h3>
+    <p><em>ID selector</em> menetapkan target elemen berdasarkan nilai dari atribut id yang diterapkan pada elemennya. 
+        Sama seperti class, atribut id dapat diterapkan pada seluruh elemen HTML, dan kebanyakan atribut ini digunakan 
+        untuk memberikan sebuah arti pada generic element seperti <strong>div</strong> dan <strong>span</strong>. <br>
+        Namun atribut id ini tidak bersifat <em>shareable</em>, yang artinya nilai id ini harus unik dan digunakan pada satu elemen saja.</p>
+        <ul>
+            <li>
+                <div>
+                    <p>Ini merupakan konten di dalam div biasa</p>
+                </div>
+            </li>
+            <li>
+                <div id="special">
+                    <p>Ini merupakan konten di dalam div special</p>
+                </div>
+            </li>
+        </ul>
+    <h3>Attribute Selector</h3>
+    <p><em>Attribute selector</em> merupakan cara menetapkan target elemen berdasarkan sebuah atribut yang digunakan atau bahkan bisa <br>
+       lebih spesifik dengan nilainya. Contohnya sebagai berikut:</p>
+       <ul>
+        <li><a href="#internal">Internal link</a></li>
+        <li><a href="http://example.com">Example link</a></li>
+        <li><a href="#InSensitive">Insensitive internal link</a></li>
+        <li><a href="http://example.org">Example org link</a></li>
+       </ul>
+    <h3>Universal Selector</h3>
+    <p><em>Universal Selector</em> digunakan untuk diterapkan pada seluruh elemen. Tetapi selector ini juga bisa secara spesifik menargetkan <br>
+       sebuah elemen dengan menggabungkan bersama selector yang lainnya. Berikut ini contohnya :</p>
+    <ul>
+        <li>
+            <article lang="en">
+                <p>Ini merupakan paragraf biasa atau tidak menerapkan atribut apapun. Maka teks pada paragraf ini akan berwarna
+                    hijau</p>
+                 <p lang="en-us">This is an English paragraph contains en-us value of lang attribute, so this text will be green and
+                    italic.</p>
+            </article>
+        </li>
+        <li>
+            <article>
+                <h1 lang="en">Ini merupakan sebuah header biasa</h1>
+                <h1 lang="en-us">This is an English Header</h1>
+            </article>
+        </li>
+        <li>
+            <article>
+                <p class="warning">Perhatikan paragraf ini! Paragraf ini merupakan paragraf yang memiliki kelas bernilai warning,
+                    sehingga teks dari paragraf ini akan berwarna merah</p>
+            </article>
+        </li>
+        <li>
+            <article>
+                <div id="content">
+                    <p>Ini merupakan sebuah teks di dalam sebuah div yang memiliki id bernilai "content", seharusnya paragraf ini
+                        dibungkus dalam border yang memiliki padding 20px</p>
+                 </div>
+            </article>
+        </li>
+    </ul>
+</body>
+</html>
