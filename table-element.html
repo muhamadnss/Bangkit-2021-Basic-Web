@@ -33,5 +33,52 @@
        <td>Jerman</td>
    </tr>
 </table>
+
+<h2>Spanning Cell</h2>
+<p><em>Spanning Cell</em> yang artinya menjangkau atau merentangkan sebuah ukuran sel lebih dari ukuran semula. <br>
+    Dengan melakukan spanning cell, maka tabel yang dibuat dapat dirancang lebih kompleks. Teknik spanning cell dapat dilakukan dengan berbagai cara, yaitu :</p>
+    <ul>
+        <li>
+            <h4>Coloumn Span</h4>
+            <p>Merentangkan sebuah kolom (coloumn spanning) dapat dilakukan dengan menggunakan atribut <em>colspan</em> pada elemen <strong>td</strong> atau <strong>th</strong>. <br>
+                Berikut merupakan contoh penggunaan dari <em>colspan</em> sehingga sebuah header table dapat mencakup dua kolom sekaligus.</p>
+                <table border="1">
+                    <tr>
+                        <th>18:00</th>
+                        <th>19:00</th>
+                        <th>20:00</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Avenger Infinity Wars</td>
+                        <td>It Chapter 2</td>
+                    </tr>
+                    <tr>
+                        <td>One Piece: Stampede</td>
+                        <td>Weathering With You</td>
+                        <td>Gundala</td>
+                    </tr>
+                    <tr>
+                        <td>Gundala</td>
+                        <td colspan="2">Avenger Infinity Wars</td>
+                    </tr>
+                 </table>
+        </li>
+        <li>
+            <h4>Row Span</h4>
+            <p>Merentangkan sebuah baris (row spanning) dapat dilakukan dengan menggunakan atribut <em>rowspan</em>.</p>
+            <table border="1">
+                <tr>
+                    <th rowspan="3">18:00</th>
+                    <td>Avenger Infinity Wars</td>
+                </tr>
+                <tr>
+                    <td>One Piece: Stampede</td>
+                </tr>
+                <tr>
+                    <td>Gundala</td>
+                </tr>
+             </table>             
+        </li>
+    </ul>
 </body>
 </html>
