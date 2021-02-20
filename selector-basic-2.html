@@ -15,6 +15,28 @@
         div p {
             background-color: yellow;
         }
+        
+        /* Implement Pseudo Class Selector */
+        a:link {
+            color: red;
+        }
+        a:visited {
+            color: green;
+        }
+        a:hover {
+            color: pink;
+        }
+        a:active {
+            color: orange;
+        }
+
+        /* Implement Pseudo Element Selector */
+        blockquote::before, blockquote::after {
+            content: '"';
+            font-size: 24px;
+            font-style: italic;
+            font-weight: bold;
+        }
 
     </style>
 </head>
@@ -52,5 +74,25 @@
                  <p>Paragraf keenam. di luar div.</p>
             </li>
         </ul>
+    <h3>Pseudo Class Selector</h3>
+    <p> <em>Pseudo-class</em> merupakan sebuah class “semu” yang sebenarnya ada pada tiap elemen HTML. <br>
+       Dengan menggunakan selector ini kita dapat memilih elemen berdasarkan class yang tidak nampak pada dokumen. <br>
+       Rule ini dapat ditetapkan hanya ketika sebuah tautan telah dikunjungi 
+      <strong>(:visited)</strong> atau ketika sebuah elemen diarahkan dengan kursor <strong>(:hover)</strong>. <br>
+       Berikut merupakan contoh hasil penggunaan dari Pseudo Class Selector :
+    </p>
+    <ul>
+        <li><a href="https://www.google.com">Kunjungi halaman ini</a></li>
+    </ul>
+    <h3>Pseudo Element Selector</h3>
+    <p>Selector ini biasa digunakan ketika akan menambahkan sebuah konten tepat sebelum dan setelah sebuah elemen paragraf. <br>
+        Sehingga cukup memanfaatkan <em>pseudo-elemen</em> <strong>::before</strong> dan <strong>::after</strong> dan menuliskannya konten tersebut cukup pada CSS. <br>
+        Hasil penggunaan dari Pseudo Element Selector dapat dilihat dibawah ini : 
+    </p>
+    <ul>
+        <li>
+            <blockquote>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus perferendis, nulla quasi quidem laboriosam reprehenderit dolorum numquam dolores ea distinctio tempora, praesentium rem laborum officia dignissimos aliquid explicabo, deleniti ad.</blockquote>
+        </li>
+    </ul>
 </body>
 </html>
