@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Selector Basic 2</title>
+    <style>
+
+        /* Implement Child Selector */
+        /* div > p {
+            background-color: yellow;
+        } */
+
+        /* Implement Descendant Selector */
+        div p {
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>Child Selector</h3>
+    <p> <em>Child Selector</em> menggabungkan dua buah basic selector dengan menggunakan tanda <strong>greater than (>)</strong> di antara basic selector-nya. <br>
+        Dalam arti lain, elemen paragraf merupakan anak dari elemen div secara langsung. <br> 
+        Berikut merupakan contoh hasil dari penggunaan <em>Child Selector</em> :</p>
+    <ul>
+        <li>
+            <div>
+                <p>Paragraf pertama. di dalam div.</p>
+                <p>Paragraf kedua. di dalam div.</p>
+                <section><p>Paragraf ketiga. di dalam div namun bukan sebagai anak elemen secara langsung.</p></section>
+                <p>Paragraf keempat. di dalam div.</p>
+             </div>
+             <p>Paragraf kelima. di luar div.</p>
+             <p>Paragraf keenam. di luar div.</p>
+        </li>
+    </ul>
+    <h3>Descendant Selector</h3>
+    <p> <em>Descendant Selector</em> mirip seperti <em>child selector</em> namun hierarkinya lebih luas, karena rule akan diterapkan pada seluruh elemen <br>
+        yang menjadi turunannya walaupun secara tidak langsung. Basic selector pertama yang dituliskan pada selector ini menjadi <br>
+        induknya dan basic selector yang kedua merupakan elemen yang akan menerapkan rule. Selector ini menggunakan spasi dalam <br>
+        menggabungkan dua basic selector. Contoh dari penggunaan nya dapat dilihat dari hasil berikut ini :</p>
+        <ul>
+            <li>
+                <div>
+                    <p>Paragraf pertama. di dalam div.</p>
+                    <p>Paragraf kedua. di dalam div.</p>
+                    <section><p>Paragraf ketiga. di dalam div namun bukan sebagai anak elemen secara langsung.</p></section>
+                    <p>Paragraf keempat. di dalam div.</p>
+                 </div>
+                 <p>Paragraf kelima. di luar div.</p>
+                 <p>Paragraf keenam. di luar div.</p>
+            </li>
+        </ul>
+</body>
+</html>
