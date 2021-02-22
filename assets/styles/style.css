@@ -1,6 +1,10 @@
 /* Embed font from external source */
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
 
+/* Implement box-sizing for all component  */
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: 'Quicksand', sans-serif;
 }
@@ -81,4 +85,21 @@ nav a:hover {
     background-color: #00c8eb;
     text-align: center;
     color: white;
+}
+
+/* Adding more whitespace on main section */
+main {
+    padding: 20px;
+    overflow: auto;
+}
+
+#content {
+    float: left;
+    width: 75%;
+}
+
+aside {
+    float: right;
+    width: 25%;
+    padding-left: 20px;
 }
