@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Flex</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            text-align: justify;
+        }
+        .container {
+            display: flex;
+  
+            /* Properti lainnya */
+            width: 800px;
+            height: 250px;
+            background-color: #11C5C6;
+            border: 2px solid black;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+        .box {
+            flex-grow: 1;
+  
+            /* properti lainnya */
+            background-color: #f2899a;
+            margin: 5px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        .flex-row {
+           display: flex;
+           flex-direction: row;
+           flex-grow: 1;
+ 
+           /* properti lainnya */
+           padding: 20px;
+           margin: 5px;
+           background-color: #FBDD1C;
+           border: 2px solid black;
+           border-radius: 10px;
+       }
+
+       .flex-column {
+           display: flex;
+           flex-direction: column;
+ 
+           /* properti lainnya */
+           width: 800px;
+           height: 300px;
+           padding: 20px;
+           margin: 0 auto;
+           border: 2px solid black;
+           border-radius: 10px;
+           background-color: #11C5C6;
+       }
+
+        .kedua {
+            flex-direction: column;
+        }
+        .first {
+            flex-grow: 1;
+        }
+        .second {
+            flex-grow: 2;
+        }
+        .third {
+            flex-grow: 1;
+        }
+        .kedua > .first {
+            flex-grow: 3;
+        }
+        .kedua > .second {
+            flex-grow: 2;
+        }
+        .kedua > .third {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <h3>Flex Container</h3>
+    <p>Flex container merupakan sebuah elemen yang menampung beberapa flex item. 
+        Karena Parent-child merupakan relasi yang wajib ada dalam penerapan flexbox, maka setiap flex item harus merupakan 
+        anak / child dari flex container.</p>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <h3>Flex Grow</h3>
+    <p>Properti flex-grow ini digunakan untuk memberitahu berapa banyak ukuran yang harus ditetapkan oleh flex-item. Nilai dari properti ini bukan nilai dari dimensi asli pada flex item, melainkan nilai yang relatif terhadap ruang kosong pada flex container. <br>
+        Jika kita menetapkan nilai yang sama pada seluruh flex item, maka dimensi dari tiap flex item akan sama rata dan memenuhi ruang kosong yang ada pada container. Namun jika kita memberikan nilai yang berbeda dari salah satu itemnya, contohnya nilai yang lebih besar, 
+        maka flex item tersebut akan mencakup ukuran yang lebih besar. Flex item yang lain akan menyusut menyesuaikan agar tetap masuk pada ruang flex container. Contohnya seperti berikut:</p>
+    <div class="container">
+        <div class="box first"></div>
+        <div class="box second"></div>
+        <div class="box third"></div>
+    </div>
+    <h3>Flex Direction</h3>
+    <p>Secara default deretan flex-item ditampilkan secara horizontal, namun kita dapat mengubahnya dengan menetapkan properti flex-direction pada container-nya. <br>
+    </p>
+    <div class="container kedua">
+        <div class="box first"></div>
+        <div class="box second"></div>
+        <div class="box third"></div>
+    </div>
+    <h4>Variasi Flex Direction</h4>
+    <div class="flex-column">
+        <div class="flex-row">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="flex-row">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+</body>
+</html>
